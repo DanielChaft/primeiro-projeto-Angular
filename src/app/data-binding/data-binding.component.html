@@ -1,0 +1,12 @@
+<h2 [class.titulo]="estilizarTitulo">{{message}}</h2>
+<img [src]="imagePath" [style.width]="imageWidth">
+
+<button [attr.aria-label]="ariaLabel" [disabled]="isDisabled" [style]="botaoFechar">Fechar</button>
+<button (click)="enableCloseButton()" [class]="botaoClass">Habilitar o botão Fechar</button>
+<button (click)="aplicarEstiloTitulo()" [class]="botaoClass">Aplicar estilo no Título</button>
+
+<label for="nome">Nome</label>
+<input typé="text" id="nome" [(ngModel)]="nomeCliente">
+
+<span>O nome digitado é: </span>
+<span id="nomeDigitado">{{nomeCliente}}</span>

@@ -1,0 +1,11 @@
+:host{
+    background: #cbcbcb;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    border: 2px solid rgb(219, 154, 57);
+}
