@@ -3,6 +3,6 @@ export class Customer {
         public id: number | null,
         public name: string,
         public cpf: string,
-        public genero: string
+        public genero?: string
     ) {}
 }

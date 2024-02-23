@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class TemplateFormComponent {
 
-  model = new Customer (null, '', '', '');
+  model = new Customer (null, '', '');
   generos = ['Masculino', 'Feminino', 'Prefiro não informar'];
   submitted = false;
 
