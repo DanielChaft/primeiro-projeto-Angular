@@ -12,6 +12,7 @@ import { guardiaoGuard } from './guardiao.guard';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { WeatherComponent } from './weather/weather.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 export const routes: Routes = [
     {path:'hello-world', title: 'Hello World', component: HelloWorldComponent, children: [
@@ -25,6 +26,7 @@ export const routes: Routes = [
     {path: 'reactive-form', title: 'Reactive Form', component: ReactiveFormComponent},
     {path: 'template-form', title: 'Template Form', component: TemplateFormComponent},
     {path: 'weather', title: 'Clima', component: WeatherComponent},
+    {path: 'pipes', title: 'Pipes', component: PipesComponent},
     {path: '', redirectTo: '/', pathMatch: 'full'},
     {path: '**', component: PageNotFoundComponent}
 ];
