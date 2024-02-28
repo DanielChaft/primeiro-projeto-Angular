@@ -1,12 +1,28 @@
+<p><a href="/">Home</a></p>
 <h2>Template Angular!</h2>
 <p>Este é o primeiro Template Angular!</p>
 
-<app-filho-a></app-filho-a>
-<app-filho-b></app-filho-b>
+<p>
+    <label for="caixaPaiA">Digite o texto que vai para o componente Filho A: </label>
+    <input type="text" id="caixaPaiA" #caixaPaiA>
+    <button (click)="textoVaiParaFilhoA = caixaPaiA.value">Enviar Para o Filho A</button>
+</p>
 
-<p><button>Salvar</button></p>
-<p><a href="/">Home</a></p>
-<p><a routerLink="filho-a">Filho A</a></p>
+<p>
+    <label for="caixaPaiB">Digite o texto que vai para o componente Filho B: </label>
+    <input type="text" id="caixaPaiB" #caixaPaiB>
+    <button (click)="textoVaiParaFilhoB = caixaPaiB.value">Enviar Para o Filho B</button>
+</p>
+
+<p *ngIf="textoVeioDoFilhoA">Esse texto veio do Filho A: {{textoVeioDoFilhoA}}</p>
+
+<p *ngIf="textoVeioDoFilhoB">Esse texto veio do Filho B: {{textoVeioDoFilhoB}}</p>
+
+<app-filho-a [texto]="textoVaiParaFilhoA" (textoPreenchido)="textoVeioDoFilhoA = $event"></app-filho-a>
+
+<app-filho-b [texto]="textoVaiParaFilhoB" (textoPreenchido)="textoVeioDoFilhoB = $event"></app-filho-b>
+
+<p><a [routerLink]="['./filho-a', caixaPaiA]">Filho A</a></p>
 <p><a routerLink="filho-b">Filho B</a></p>
 
 <router-outlet/>

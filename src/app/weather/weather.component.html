@@ -15,6 +15,6 @@
 
 <div *ngIf="weatherData">
     <p>Clima: {{weatherData.weather[0].description}}</p>
-    <p>Temperatura: {{weatherData.main.temp}}ºC</p>
+    <p>Temperatura: {{weatherData.main.temp | number}}ºC</p>
     <p><img src="{{'http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png'}}"></p>
 </div>
